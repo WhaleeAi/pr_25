@@ -13,7 +13,21 @@
       <link>http://localhost:1313/journal/post1/</link>
       <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/journal/post1/</guid>
-      <description>&lt;p&gt;Мы начали с мозгового штурма и обсуждения целей проекта. Были выбраны направления работы и распределены роли.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Было проведено сравнение учебного плана по направлению подготовки 09.03.03 Прикладная информатика с соответствующим Федеральным государственным образовательным стандартом (ФГОС).&lt;/p&gt;&#xA;&lt;p&gt;Было проведено сравнение учебного плана по направлению подготовки 27.03.05 Инноватика с соответствующим Федеральным государственным образовательным стандартом (ФГОС).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Посетили заказчика</title>
+      <link>http://localhost:1313/journal/post3/</link>
+      <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/journal/post3/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/photo_2025-03-12_16-35-51.jpg&#34; alt=&#34;Схема проекта&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Провели опрос</title>
+      <link>http://localhost:1313/journal/post2/</link>
+      <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/journal/post2/</guid>
+      <description>&lt;p&gt;Был проведен опрос людей, какие компетенции важны для будущих работников, типо того&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/image_2025-04-14_00-36-15.png&#34; alt=&#34;Схема проекта&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
