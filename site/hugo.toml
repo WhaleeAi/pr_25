@@ -1,4 +1,29 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = "ananke"
+baseURL = 'https://example.com/'
+languageCode = 'ru'
+title = 'Проектная практика'
+theme = 'ananke'
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "О проекте"
+    url = "/about/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "participants"
+    name = "Участники"
+    url = "/participants/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "journal"
+    name = "Журнал"
+    url = "/journal/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "resources"
+    name = "Ресурсы"
+    url = "/resources/"
+    weight = 4

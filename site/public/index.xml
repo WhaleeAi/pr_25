@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>Проектная практика</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on Проектная практика</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>ru</language>
     <lastBuildDate>Sun, 13 Apr 2025 23:53:19 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -14,6 +14,34 @@
       <pubDate>Sun, 13 Apr 2025 23:53:19 +0300</pubDate>
       <guid>http://localhost:1313/posts/hello-hugo/</guid>
       <description></description>
+    </item>
+    <item>
+      <title>Начало проекта</title>
+      <link>http://localhost:1313/journal/post1/</link>
+      <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/journal/post1/</guid>
+      <description>&lt;p&gt;Мы начали с мозгового штурма и обсуждения целей проекта. Были выбраны направления работы и распределены роли.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>О проекте</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h2 id=&#34;описание-проекта&#34;&gt;Описание проекта&lt;/h2&gt;&#xA;&lt;p&gt;Наш проект посвящён разработке [вставить тему проекта]. Цель проекта — [цель]. Проект реализуется в сотрудничестве с [организация-партнёр].&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/photo_2024-10-24_23-02-51.jpg&#34; alt=&#34;Схема проекта&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ресурсы</title>
+      <link>http://localhost:1313/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/</guid>
+      <description>&lt;h2 id=&#34;полезные-ссылки&#34;&gt;Полезные ссылки&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://example.org&#34;&gt;Организация-партнёр&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://example.com/article&#34;&gt;Статья о технологии&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://youtube.com/video123&#34;&gt;YouTube-видео по теме&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
+    <item>
+      <title>Участники</title>
+      <link>http://localhost:1313/participants/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/participants/</guid>
+      <description>&lt;h2 id=&#34;вклад-участников&#34;&gt;Вклад участников&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Азамат&lt;/strong&gt; — разработка сайта, структурирование информации.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Имя 2&lt;/strong&gt; — анализ данных, подготовка графиков.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Имя 3&lt;/strong&gt; — коммуникация с партнёрами, наполнение контентом.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/photo_2024-12-19_23-42-10.jpg&#34; alt=&#34;Команда&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
