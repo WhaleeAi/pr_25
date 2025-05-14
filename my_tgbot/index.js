@@ -1,50 +1,134 @@
-var express = require("express")
-var app = express()
-var bodyParser = require("body-parser")
-const axios = require("axios")
+const express = require("express");
+const bodyParser = require("body-parser");
+const axios = require("axios");
 
-app.use(bodyParser.json()) // for parsing application/json
-app.use(
-	bodyParser.urlencoded({
-		extended: true,
-	})
-) // for parsing application/x-www-form-urlencoded
+const app = express();
+const TOKEN = "8165226154:AAHTXkc29ddUXUuWt2G4CX-oe4COsxRMGOA"; // Ваш токен
+const API = `https://api.telegram.org/bot${TOKEN}`;
 
-//This is the route the API will call
-app.post("/new-message", function(req, res) {
-	const { message } = req.body
+// Для хранения состояний пользователей (в памяти)
+const userStates = {};
 
-	//Each message contains "text" and a "chat" object, which has an "id" which is the chat id
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-	if (!message || message.text.toLowerCase().indexOf("привет") < 0) {
-		// In case a message is not present, or if our message does not have the word marco in it, do nothing and return an empty response
-		return res.end()
-	}
+app.post("/new-message", async (req, res) => {
+  try {
+    // Обработка нажатий инлайн-кнопок
+    if (req.body.callback_query) {
+      const { data, message: callbackMessage } = req.body.callback_query;
+      const chatId = callbackMessage.chat.id;
 
-	// If we've gotten this far, it means that we have received a message containing the word "marco".
-	// Respond by hitting the telegram bot API and responding to the appropriate chat_id with the word "Polo!!"
-	// Remember to use your own API toked instead of the one below  "https://api.telegram.org/bot<your_api_token>/sendMessage"
-	axios
-		.post(
-			"https://api.telegram.org/bot8165226154:AAHTXkc29ddUXUuWt2G4CX-oe4COsxRMGOA/sendMessage",
-			{
-				chat_id: message.chat.id,
-				text: "вечер в хату!!",
-			}
-		)
-		.then((response) => {
-			// We get here if the message was successfully posted
-			console.log("Message posted")
-			res.end("ok")
-		})
-		.catch((err) => {
-			// ...and here if it was not
-			console.log("Error :", err)
-			res.end("Error :" + err)
-		})
-})
+      if (data === "btn1") {
+        await axios.post(`${API}/sendMessage`, {
+          chat_id: chatId,
+          text: "Вы нажали кнопку 1!"
+        });
+      } else if (data === "btn2") {
+        await axios.post(`${API}/sendMessage`, {
+          chat_id: chatId,
+          text: "Вы нажали кнопку 2!"
+        });
+      }
 
-// Finally, start our server
-app.listen(3000, function() {
-	console.log("Telegram app listening on port 3000!")
-})
+      return res.end();
+    }
+
+    const { message } = req.body;
+    if (!message || !message.text) return res.end();
+
+    const text = message.text.trim();
+    const chatId = message.chat.id;
+
+    // Команды /start, /help, /menu, /joke, /quiz
+    switch (text.toLowerCase()) {
+      case "/start":
+        await axios.post(`${API}/sendMessage`, {
+          chat_id: chatId,
+          text: "Добро пожаловать! Доступные команды:\n/help - помощь\n/joke - случайный анекдот\n/menu - открыть меню\n/quiz - викторина",
+          parse_mode: "Markdown"
+        });
+        return res.end();
+
+      case "/help":
+        await axios.post(`${API}/sendMessage`, {
+          chat_id: chatId,
+          text: "*Помощь по боту:*\n/start - запустить бота\n/help - помощь\n/joke - анекдот\n/menu - меню с кнопками\n/quiz - викторина",
+          parse_mode: "Markdown"
+        });
+        return res.end();
+
+      case "/menu":
+        await axios.post(`${API}/sendMessage`, {
+          chat_id: chatId,
+          text: "Выберите действие:",
+          reply_markup: {
+            inline_keyboard: [
+              [{ text: "Кнопка 1", callback_data: "btn1" }],
+              [{ text: "Кнопка 2", callback_data: "btn2" }]
+            ]
+          }
+        });
+        return res.end();
+
+      case "/joke":
+        try {
+          const jokeRes = await axios.get("https://official-joke-api.appspot.com/random_joke");
+          const joke = `${jokeRes.data.setup}\n${jokeRes.data.punchline}`;
+          await axios.post(`${API}/sendMessage`, {
+            chat_id: chatId,
+            text: joke
+          });
+        } catch (err) {
+          await axios.post(`${API}/sendMessage`, {
+            chat_id: chatId,
+            text: "Не удалось получить анекдот. Попробуйте позже."
+          });
+        }
+        return res.end();
+
+      case "/quiz":
+        userStates[chatId] = "waiting_for_answer";
+        await axios.post(`${API}/sendMessage`, {
+          chat_id: chatId,
+          text: "Сколько будет 2+2?"
+        });
+        return res.end();
+    }
+
+    // Обработка состояния викторины
+    if (userStates[chatId] === "waiting_for_answer") {
+      if (text === "4") {
+        await axios.post(`${API}/sendMessage`, {
+          chat_id: chatId,
+          text: "Правильно! 🎉"
+        });
+      } else {
+        await axios.post(`${API}/sendMessage`, {
+          chat_id: chatId,
+          text: "Неправильно. Попробуйте снова командой /quiz."
+        });
+      }
+      delete userStates[chatId];
+      return res.end();
+    }
+
+    // Простая проверка приветствия
+    if (text.toLowerCase().includes("привет")) {
+      await axios.post(`${API}/sendMessage`, {
+        chat_id: chatId,
+        text: "вечер в хату!!"
+      });
+      return res.end();
+    }
+
+    // По умолчанию: ничего не делать
+    return res.end();
+
+  } catch (error) {
+    console.error("Ошибка обработки обновления:", error);
+    return res.end();
+  }
+});
+
+app.listen(3000, () => console.log("Telegram bot listening on port 3000!"));
