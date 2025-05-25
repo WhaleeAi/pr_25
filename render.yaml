@@ -1,12 +1,9 @@
 services:
   - type: static
-    name: hugo-site
+    name: pr25-site
     env: static
-    buildCommand: |
-      curl -L https://github.com/gohugoio/hugo/releases/download/v0.128.1/hugo_extended_0.128.1_linux-amd64.tar.gz -o hugo.tar.gz
-      tar -xzf hugo.tar.gz
-      mv hugo /usr/local/bin/hugo
-      rm hugo.tar.gz
-      hugo
+    buildCommand: hugo --minify
     staticPublishPath: public
-    rootDir: site
+    buildEnvironmentVariables:
+      - key: HUGO_VERSION
+        value: 0.128.0
