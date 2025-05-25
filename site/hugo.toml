@@ -1,4 +1,4 @@
-baseURL = 'https://pr-25.onrender.com'
+baseURL = 'example.com'
 languageCode = 'ru'
 title = 'Проектная практика'
 theme = 'ananke'
