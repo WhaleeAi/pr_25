@@ -1,5 +1,5 @@
 services:
-  - type: static
+  - type: web
     name: pr25-site
     env: static
     buildCommand: hugo --minify
