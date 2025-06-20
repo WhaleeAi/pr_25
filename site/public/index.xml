@@ -2,60 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Проектная практика</title>
-    <link>http://localhost:1313/</link>
+    <link>//localhost:1313/</link>
     <description>Recent content on Проектная практика</description>
     <generator>Hugo</generator>
     <language>ru</language>
     <lastBuildDate>Sun, 13 Apr 2025 23:53:19 +0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello Hugo</title>
-      <link>http://localhost:1313/posts/hello-hugo/</link>
+      <link>//localhost:1313/posts/hello-hugo/</link>
       <pubDate>Sun, 13 Apr 2025 23:53:19 +0300</pubDate>
-      <guid>http://localhost:1313/posts/hello-hugo/</guid>
+      <guid>//localhost:1313/posts/hello-hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Начало проекта</title>
-      <link>http://localhost:1313/journal/post1/</link>
+      <link>//localhost:1313/journal/post1/</link>
       <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/journal/post1/</guid>
+      <guid>//localhost:1313/journal/post1/</guid>
       <description>&lt;p&gt;Было проведено сравнение учебного плана по направлению подготовки 09.03.03 Прикладная информатика с соответствующим Федеральным государственным образовательным стандартом (ФГОС).&lt;/p&gt;&#xA;&lt;p&gt;Было проведено сравнение учебного плана по направлению подготовки 27.03.05 Инноватика с соответствующим Федеральным государственным образовательным стандартом (ФГОС).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Посетили заказчика</title>
-      <link>http://localhost:1313/journal/post3/</link>
+      <link>//localhost:1313/journal/post3/</link>
       <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/journal/post3/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/photo_2025-03-12_16-35-51.jpg&#34; alt=&#34;Схема проекта&#34;&gt;&lt;/p&gt;</description>
+      <guid>//localhost:1313/journal/post3/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/photo_2025-03-12_16-35-51.jpg&#34; alt=&#34;Схема проекта&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Провели опрос</title>
-      <link>http://localhost:1313/journal/post2/</link>
+      <link>//localhost:1313/journal/post2/</link>
       <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/journal/post2/</guid>
-      <description>&lt;p&gt;Был проведен опрос людей, какие компетенции важны для будущих работников, типо того&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/image_2025-04-14_00-36-15.png&#34; alt=&#34;Схема проекта&#34;&gt;&lt;/p&gt;</description>
+      <guid>//localhost:1313/journal/post2/</guid>
+      <description>&lt;p&gt;Был проведен опрос людей, какие компетенции важны для будущих работников, типо того&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/image_2025-04-14_00-36-15.png&#34; alt=&#34;Схема проекта&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>О проекте</title>
-      <link>http://localhost:1313/about/</link>
+      <link>//localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>//localhost:1313/about/</guid>
       <description>&lt;h2 id=&#34;описание-проекта&#34;&gt;Описание проекта&lt;/h2&gt;&#xA;&lt;p&gt;Многие выпускники сталкиваются с недостатком практических навыков и ориентировки на рынке труда, что затрудняет их трудоустройство.&#xA;Разрыв между образовательными программами и реальными требованиями  работодателей приводит к дефициту квалифицированных кадров.&lt;/p&gt;&#xA;&lt;p&gt;Молодые специалисты зачастую не имеют четкого представления о своих сильных и слабых сторонах, что мешает им эффективно планировать свое профессиональное развитие и карьерный путь.&lt;/p&gt;&#xA;&lt;p&gt;Цель проекта - создать и наполнить карты компетенций для выпускников по направлениям подготовки/специальности под запросы работодателей. Это будет являться важным инструментом, который будет помогать определить необходимые навыки и знания для успешной профессиональной деятельности на современном рынке труда.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ресурсы</title>
-      <link>http://localhost:1313/resources/</link>
+      <link>//localhost:1313/resources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/resources/</guid>
+      <guid>//localhost:1313/resources/</guid>
       <description>&lt;h2 id=&#34;полезные-ссылки&#34;&gt;Полезные ссылки&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://example.org&#34;&gt;Организация-партнёр&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://example.com/article&#34;&gt;Статья о технологии&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://youtube.com/video123&#34;&gt;YouTube-видео по теме&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;</description>
     </item>
     <item>
       <title>Участники</title>
-      <link>http://localhost:1313/participants/</link>
+      <link>//localhost:1313/participants/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/participants/</guid>
-      <description>&lt;h2 id=&#34;вклад-участников&#34;&gt;Вклад участников&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Азамат&lt;/strong&gt; — создание инфографики для компетенций, создание лендинга для проекта, участие в коммуникации с партнерами.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Яна Б&lt;/strong&gt; — разработка бота-помощника,  создание инфографики для компетенций,  участие в коммуникации с партнерами.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/photo_2024-12-19_23-42-10_1.jpg&#34; alt=&#34;Команда&#34;&gt;&lt;/p&gt;</description>
+      <guid>//localhost:1313/participants/</guid>
+      <description>&lt;h2 id=&#34;вклад-участников&#34;&gt;Вклад участников&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Азамат&lt;/strong&gt; — создание инфографики для компетенций, создание лендинга для проекта, участие в коммуникации с партнерами.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Яна Б&lt;/strong&gt; — разработка бота-помощника,  создание инфографики для компетенций,  участие в коммуникации с партнерами.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/photo_2024-12-19_23-42-10_1.jpg&#34; alt=&#34;Команда&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
